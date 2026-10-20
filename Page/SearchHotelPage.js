@@ -20,7 +20,7 @@ export class SearchHotelPage {
     async selectHotel(hotelLabel) {
         await this.hotels.selectOption({ label: hotelLabel });
     }
-
+ 
     async selectRoomType(roomTypeIndex) {
         await this.roomType.selectOption({ index: roomTypeIndex });
     }
