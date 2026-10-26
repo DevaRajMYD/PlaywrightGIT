@@ -40,7 +40,7 @@ await newTap.locator('//a[@class="nav-link"]').first().click()
 
 //Code for MultiWindow Handling ---> need to find multiWindow optional website to run this code
 
-test.only('Multi Window Handling', async ({context}) => {
+test('Multi Window Handling', async ({context}) => {
   const mainPage = await context.newPage();
   await mainPage.goto('https://demo.automationtesting.in/Windows.html');
   await mainPage.locator('//a[@href="#Multiple"]').click()
