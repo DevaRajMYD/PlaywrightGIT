@@ -1,0 +1,11 @@
+{
+    "firstname" : "Devaraj",
+    "lastname" : "DD",
+    "totalprice" : 111,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2016-10-28",
+        "checkout" : "2027-01-01"
+    },
+    "additionalneeds" : "Breakfast"
+}
