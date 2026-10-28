@@ -1,13 +1,13 @@
 import { test, expect, request } from '@playwright/test'
-import PostData from '../Data_Api/Post.json'
-import TokenData from '../Data_Api/Token.json'
-import PutData from '../Data_Api/Put.json'
+import PostData from '../Data_Api/Post.json'   //here "PostData" is given name by ourself and '../Data_Api/Post.json' is path in the structure left side
+import TokenData from '../Data_Api/Token.json'  // same as "PostData"
+import PutData from '../Data_Api/Put.json'      // same as "PostData"
 
-var B_Id = ""
-var BearerToken = ""
-test.describe.serial('Serial Tests', async () => {
+var B_Id = ""           // might be "B_Id" is used in all tests so it is declared in "var" out of the scope 
+var BearerToken = ""    // same as B_Id
+test.describe.serial('Serial Tests', async () => {     // using "test.describe.serial" we can run all tests serially inside it.
 
-  // GET Method
+  // GET Method - To fetch the data
 
   test('Get booking id', async ({ request }) => {
     const response = await request.get('https://restful-booker.herokuapp.com/booking');
@@ -32,7 +32,7 @@ test.describe.serial('Serial Tests', async () => {
 
   test('Create Booking details', async ({ request }) => {
     const response = await request.post('https://restful-booker.herokuapp.com/booking', {
-      data: PostData
+      data: PostData           //that given name ("PostDta") in import used here as a value and here "data" as a key and it's declared as our own
     });
     const body = await response.json();
     console.log(body);
